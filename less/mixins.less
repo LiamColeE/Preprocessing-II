@@ -1,1 +1,11 @@
 // Mixins in here
+.button(@button-color:red, @button-text-color:blue, @button-text-size:1rem, @button-width:80px, @button-height:20px, @button-roundness: 5px){
+    background-color: @button-color;
+    color: @button-text-color;
+    padding-top: @button-height/2;
+    padding-bottom: @button-height/2;
+    text-align: center;
+    border-radius: @button-roundness;
+    width:@button-width;
+    font-size: @button-text-size;
+}

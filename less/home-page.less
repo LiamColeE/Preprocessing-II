@@ -5,20 +5,27 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
-   
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile{
+        padding: 0px;
+        width: 100%;
+      }
       img {
         border-radius: 10px;
+        @media @mobile{
+          width: 100%;
+        }
       }
     }
   }
@@ -26,21 +33,41 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
       padding-right: 0;
+      @media @mobile{
+        padding-left:0px;
+      }
     }
 
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media @mobile{
+        padding-right:0px;
+        width: 100%;
+      }
+
+      img{
+        @media @mobile{
+          width: 100%;
+        }
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
+
+    @media @mobile{
+      width: 100%;
+    }
 
     img {
       border-radius: 10px;
@@ -52,9 +79,30 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    @media @mobile{
+      justify-content: center;
+    }
 
     .destination {
       width: 30%;
+      margin-bottom: 30px;
+
+      @media @mobile{
+        width: 75%;
+      }
+    }
+    .btn{
+      .button(@button-bg, white, 1.25rem, 150px, 15px, 7.5px);
+      @media @mobile{
+        .button(@button-bg, white, 1.5rem, 100%, 20px, 10px);
+      }
+    }
+  }
+
+  .page-head{
+    border-bottom: 2px dashed @navigation-border;
+    img{
       margin-bottom: 30px;
     }
   }
