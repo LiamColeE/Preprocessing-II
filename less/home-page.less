@@ -11,12 +11,17 @@
     .text-content {
       width: 48%;
       padding-right: 1%;
+      @media @mobile{
+        width:100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+      @media @mobile{
+        width:100%;
+      }
       img {
         border-radius: 10px;
       }
@@ -26,6 +31,9 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    @media @mobile{
+      flex-direction: column-reverse;
+    }
 
     .text-content {
       padding-left: 1%;
@@ -55,6 +63,17 @@
 
     .destination {
       width: 30%;
+      margin-bottom: 30px;
+    }
+    .btn{
+
+      .button(@button-bg, white, 1.25rem, 150px, 15px, 7.5px);
+    }
+  }
+
+  .page-head{
+    border-bottom: 2px dashed @navigation-border;
+    img{
       margin-bottom: 30px;
     }
   }
